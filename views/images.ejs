@@ -1,49 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <!-- THE HEAD TAG PARTIAL -->
-  <%- include("partials/head") %>
-  <body>
-    <!-- THE HEADER TAG PARTIAL -->
+<head>
+  <html lang="en">
     <%- include("partials/header") %>
-    <nav class="navbar is-white has-shadow">
-      <!-- logo / brand -->
-      <div class="navbar-brand">
-        <a class="navbar-item"><p>Image Lover: A Place to Store Your Images</p></a>
-        <a class="navbar-burger" id="burger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
-      </div>
+    <%- include("partials/head") %>
+  </head>
 
-      <div class="navbar-menu" id="nav-links">
-        <!-- right links -->
-        <div class="navbar-end">
-          <a class="navbar-item" href="/">Home</a>
-          <a class="navbar-item"></a>
-        </div>
-      </div>
-    </nav>
-    <main>
+  <body>
+    <section>
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column sidebar">Add <form action="/images" method="post">
+            <input type="text" placeholder="Type Image Here" name="text" />
+            <input type="submit" value="Add Image"/>
+          </form>
+          </div>
+          <div class="column content">
+            
+  <main>
       <!-- *********DISPLAY OUR GOALS********* -->
       <div class="container is-fluid">
         <!-- **********NEW IMAGES FORM**************** -->
-        <div class="form-container is-centered">
-        <form action="/images" method="post">
-          <input type="text" placeholder="Type Image Here" name="text" />
-          <input type="submit" value="Add Image"/>
-        </form>
-      </div>
-        <h1 class="title">My Images</h1>
-        <a href="/auth/logout"><button class="button">Log Out</button></a>
+        <h1 class="title is-1 mt-5 has-text-centered">My Images</h1>
         <% for (image of images) { %>
-        <figure class="image is-2by3">
-          <img class="is-centered m-5 p-5" src="<%=image.text%>" />
+        <figure class="image">
+          <img class="is-centered m-2 p-2" src="<%=image.text%>" />
         </figure>
         <% } %>
     </div>
     </main>
-    <!-- THE HEAD TAG PARTIAL -->
+          
+          </div>
+        </div>
+      </div>
+    </section>
     <%- include("partials/footer") %>
+
   </body>
 </html>

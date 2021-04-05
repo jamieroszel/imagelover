@@ -1,0 +1,19 @@
+
+.columns {
+}
+
+.column {
+  display: flex;
+  min-height: 100vh;
+}
+
+.column.sidebar {
+  width: 220px;
+  min-width: 220px;
+  max-width: 220px;
+  background: darkgrey;
+}
+
+.column.content {
+  background: lightgrey;
+}
