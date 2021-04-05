@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("partials/head") %>
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("partials/header") %>
+    <nav class="navbar is-white has-shadow">
+      <!-- logo / brand -->
+      <div class="navbar-brand">
+        <!-- <a class="navbar-item"><p>Image Lover: a place to store images</p></a> -->
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+
+      <div class="navbar-menu" id="nav-links">
+        <!-- right links -->
+        <div class="navbar-end">
+          <a class="navbar-item" href="/">Home</a>
+          <a class="navbar-item"></a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <h1 class="title">Images App</h1>
+      <h2 class="subtitle">A place for tracking images</h2>
+      <a href="/auth/signup"><button class="button">Sign Up</button></a>
+      <a href="/auth/login"><button class="button">Log In</button></a>
+    </main>
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("partials/footer") %>
+  </body>
+</html>
