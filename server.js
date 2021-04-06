@@ -2,8 +2,6 @@
 require("dotenv").config();
 // IMPORT EXPRESS
 const express = require("express");
-// Import User
-const User = require("/models/user.js")
 // IMPORT DATABASE CONNECTION
 const mongoose = require("./db/connection");
 // IMPORT MERCED LOGGER
