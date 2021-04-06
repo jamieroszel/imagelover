@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <!-- THE HEAD TAG PARTIAL -->
-    <%- include("../partials/head") %>
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("../partials/head") %>
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("../partials/header") %>
+    <main class="has-background-light">
+<!-- 
 
-    <body>
-        <!-- THE HEADER TAG PARTIAL -->
-        <%- include("../partials/header") %>
-        <main>
-            <h1>User Sign Up</h1>
-            <form action="/auth/signup" method="post">
-            <input type="text" placeholder="username" name="username">
-            <input type="password" placeholder="password" name="password">
-            <input type="submit" value="Sign Up">
-            </form>
-        </main>
-        <!-- THE HEAD TAG PARTIAL -->
-        <%- include("../partials/footer") %>
-    </body>
+        <input
+          class="input is-normal"
+          type="text"
+          placeholder="username"
+          name="username"
+        />
+        <input
+          class="input is-normal"
+          type="password"
+          placeholder="password"
+          name="password"
+        />
+ -->
+
+      <form action="/auth/signup" method="post">
+      <h1 class="is-size-1-fulldhd is-size-2-tablet is-size-3-mobile">Sign up below:</h1>
+      <div class="field ml-2">
+        <p class="control has-icons-left has-icons-right">
+          <input class="input" type="text" placeholder="username" name="username"/>
+          <span class="icon is-small is-left"
+            ><i class="fas fa-user-check"></i
+          ></span>
+          <span class="icon is-small is-right"
+            ><i class="fas fa-check"></i
+          ></span>
+        </p>
+      </div>
+      <div class="field ml-2">
+        <p class="control has-icons-left">
+          <input class="input" type="password" placeholder="Password" name="password"/>
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <input class="ml-2"type="submit" value="login" />
+    </form>
+    </main>
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("../partials/footer") %>
+  </body>
 </html>

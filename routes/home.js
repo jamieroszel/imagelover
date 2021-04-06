@@ -107,6 +107,7 @@ router.post("/images", isAuthorized, async (req, res) => {
     // redirect back to images
     res.redirect("/images")
 })
+
 ///////////////////////////////
 // Export Router
 ////////////////////////////////

@@ -17,3 +17,35 @@
 .column.content {
   background: lightgrey;
 }
+@media screen and (max-width: 1024px) {
+  .navbar-menu {
+    display: none;
+  }
+}
+//We don't need checkbox to be displayed in order for it to work
+.toggler {
+  display: none;
+}
+//Below are all the functionalities:
+.navbar .toggler:checked {
+  //Hamburger changes to X when toggler is checked
+  & + .navbar-brand .burger {
+    & span:nth-child(1) {
+      -webkit-transform: translateY(5px) rotate(45deg);
+      transform: translateY(5px) rotate(45deg);
+    }
+    & span:nth-child(2) {
+      opacity: 0;
+    }
+    & span:nth-child(3){
+      -webkit-transform: translateY(-5px) rotate(-45deg);
+      transform: translateY(-5px) rotate(-45deg);
+    }
+  }
+  //Displays menu when toggler is checked only on mobile/tablet
+  & ~ .navbar-menu {
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+}
